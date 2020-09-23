@@ -22,6 +22,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}"
 
 src_install(){
+    cd "gh_${PV}_linux_amd64"
 	dobin "bin/gh"
 	insinto "/usr/share/licenses/${PN}"
 	newins "LICENSE" "LICENSE"
