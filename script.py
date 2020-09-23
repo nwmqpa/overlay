@@ -49,6 +49,18 @@ def get_trilium_versions():
     tags = sorted(tags)
     return [str(tag) for tag in tags]
 
+def get_gh_versions():
+    tags = subprocess.check_output(["git", "ls-remote", "--tags", "https://github.com/cli/cli"]).decode()
+    tags = filter(len, tags.split("\n"))
+    tags = map(lambda x: x.split("\t")[1], tags)
+    tags = map(lambda x: re.search(r"^refs/tags/v(([0-9]+.?)+)$", x), tags)
+    tags = filter(lambda x: x is not None, tags)
+    tags = map(lambda x: x.groups()[0], tags)
+    tags = map(lambda x: version.parse(x), tags)
+    tags = sorted(tags)
+    return [str(tag) for tag in tags]
+
+
 def get_available_versions(package: str) -> [str]:
     """Return the avaible versions for the given package in the repository."""
     regex = re.compile(package.split("/")[-1] + "-(.*)\.ebuild$")
