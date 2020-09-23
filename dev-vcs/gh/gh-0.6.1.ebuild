@@ -27,6 +27,7 @@ src_install(){
 	insinto "/usr/share/licenses/${PN}"
 	newins "LICENSE" "LICENSE"
     insinto "/usr/share/man/man1"
-    doman "share/man/man1/*"
+	cd "share/man/man1"
+    doman *.1
 }
 
