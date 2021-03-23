@@ -33,7 +33,7 @@ def get_visual_studio_code_versions():
     tags = filter(lambda x: x is not None, tags)
     tags = map(lambda x: x.groups()[0], tags)
     tags = map(lambda x: version.parse(x), tags)
-    tags = filter(lambda x: x >= version.parse("1.0.0") and x != version.parse("1.7.0"), tags)
+    tags = filter(lambda x: x >= version.parse("1.0.0") and x != version.parse("1.7.0") and x != version.parse("1.999.0"), tags)
     tags = sorted(tags)
     return [str(tag) for tag in tags]
 
