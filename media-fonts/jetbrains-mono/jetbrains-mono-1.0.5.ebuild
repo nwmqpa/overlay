@@ -3,7 +3,7 @@ inherit font
 
 DESCRIPTION="JetBrains Mono – the free and open-source typeface for developers "
 HOMEPAGE="https://jetbrains.com/mono"
-SRC_URI="https://github.com/JetBrains/JetBrainsMono/releases/download/v${PV}/JetBrainsMono-${PV}.zip"
+SRC_URI="https://download-cf.jetbrains.com/fonts/JetBrainsMono-${PV}.zip"
 
 LICENSE="OFL-1.1"
 SLOT="0"
