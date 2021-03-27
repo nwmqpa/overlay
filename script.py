@@ -10,6 +10,7 @@ def get_jetbrains_mono_versions():
     tags = map(lambda x: re.search(r"^refs/tags/v(([0-9]+.?)+)$", x), tags)
     tags = filter(lambda x: x is not None, tags)
     tags = map(lambda x: x.groups()[0], tags)
+    tags = filter(lambda x: x not in ["1.0.4", "1.0.5", "1.0.6", "2.000", "2.200", "2.210"], tags)
     tags = sorted(tags)
     return [str(tag) for tag in tags]
 
