@@ -1,9 +1,9 @@
-EAPI=5
+EAPI=7
 inherit font
 
 DESCRIPTION="JetBrains Mono – the free and open-source typeface for developers "
 HOMEPAGE="https://jetbrains.com/mono"
-SRC_URI="https://download.jetbrains.com/fonts/JetBrainsMono-1.0.0.zip"
+SRC_URI="https://download.jetbrains.com/fonts/JetBrainsMono-${PV}.zip"
 
 LICENSE="OFL-1.1"
 SLOT="0"
