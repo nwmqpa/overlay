@@ -11,5 +11,5 @@ KEYWORDS="~amd64"
 IUSE=""
 DEPEND="app-arch/unzip"
 
-S=${WORKDIR}
+S=${WORKDIR}/ttf
 FONT_SUFFIX="ttf"
