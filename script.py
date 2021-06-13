@@ -46,7 +46,7 @@ def get_trilium_versions():
     tags = filter(lambda x: x is not None, tags)
     tags = map(lambda x: x.groups()[0], tags)
     tags = map(lambda x: version.parse(x), tags)
-    tags = filter(lambda x: x >= version.parse("0.28.2") and x not in [version.parse("0.30.6"), version.parse("0.37.7"), version.parse("0.44.7"), version.parse("0.44.5"), version.parse("0.45.5")], tags)
+    tags = filter(lambda x: x >= version.parse("0.28.2") and x not in [version.parse("0.30.6"), version.parse("0.37.7"), version.parse("0.44.7"), version.parse("0.44.5"), version.parse("0.45.5"), version.parse("0.46.8")], tags)
     tags = sorted(tags)
     return [str(tag) for tag in tags]
 
